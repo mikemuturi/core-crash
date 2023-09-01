@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 
 
 //functions are used to break program to small blocks of code
@@ -9,8 +10,9 @@ void greet()
 	{
 		printf("Good Morning\n");
 	}
-void addNumbers()
-	{
+int addNumbers()
+	{ //note int in function definiton is accompanied by return,
+	  //you can only return if function is initialized as int.
 		int number1, number2;
 
 		printf("Enter number1 : ");
@@ -21,7 +23,13 @@ void addNumbers()
 		
 		int sum = number1 + number2;
 
-		printf("sum is %d\n ", sum);
+		//printf("sum is %d\n ", sum);
+
+		return sum;
+
+		printf("After return statement");
+
+		
 	}
 
 double calculateSquare()
@@ -42,9 +50,22 @@ int main()
 	 
 	 greet();
 
-	 addNumbers();
+	int result =  addNumbers();
+
+	printf(" Result = %d\n", result);
 
 	 calculateSquare();
+
+	 float result1;
+
+	 //printf("Enter a float value: ");
+	 //scanf("%f", &result1);
+	 
+	 result1 = sqrt(5);
+
+	 printf("The square root is %f", result1);
+
+
 
 	return 0;
 }		
